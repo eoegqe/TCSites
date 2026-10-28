@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loading TCSites…</title>
+<script>
+(function () {
+  var path = window.location.pathname;
+  var query = window.location.search;
+  var hash = window.location.hash;
+  window.location.replace('/?route=' + encodeURIComponent(path) + '&originalQuery=' + encodeURIComponent(query) + '&originalHash=' + encodeURIComponent(hash));
+})();
+</script>
+</head>
+<body>
+<p>Opening TCSites…</p>
+</body>
+</html>
