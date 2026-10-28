@@ -54,7 +54,7 @@ $('openEditor').onclick=()=>showEditor();$('createHero').onclick=()=>showEditor(
 $('siteSlug').addEventListener('input',()=>{$('siteSlug').value=slugify($('siteSlug').value);updatePreview()});
 window.addEventListener('popstate',()=>{if(location.hash==='#editer')showEditor(sites.find(s=>s.id===activeId)||undefined);else showHome()});
 renderSites();
-if(location.pathname.replace(/\/+$/,'').endsWith('/editer')||location.hash==='#editer'){showEditor(sites[0]||undefined)}
+if(location.pathname.replace(/\\/+$/,'').endsWith('/editer')||location.hash==='#editer'||new URLSearchParams(location.search).get('route')==='/editer'){showEditor(sites[0]||undefined)}
 })();
 </script>
 </body>
